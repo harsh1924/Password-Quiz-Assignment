@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Passowrd Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#383961]">
+    <div class="container flex flex-col justify-center items-center h-screen text-white">
+        <div id="generator-wrapper"
+            class="flex flex-col justify-center items-center border border-[#DBDFAC] rounded px-8 py-10 gap-y-5 w-[500px]">
+            <h1 class="text-3xl font-bold">Password Generator</h1>
+            <div class="border w-[80%] px-2 py-1 text-[#383961] bg-white">
+                <span id="result">Click on Generate Button</span>
+            </div>
+            <span id="error"></span>
+            <div id="buttons" class="flex gap-x-4">
+                <button id="generateButton" class="rounded px-4 py-2 bg-[#5F758E]
+                ">Generate</button>
+                <button class="rounded px-4 py-2
+                bg-[#5F758E]" id="clipboard">Copy to clipboard</button>
+            </div>
+            <div class="checklist w-[80%] mt-[10px] font-bold">
+                <div class="flex justify-between">
+                    <label for="length">Password Length</label>
+                    <input type="number" name="number" id="length" class="w-[70px] px-2 text-[#383961]" value="10" min="4" max="20">
+                </div>
+                <div class="flex justify-between">
+                    <label for="lowerCase">Include lowercase letters</label>
+                    <input type="checkbox" name="checkbox" id="lowerCase" checked>
+                </div>
+                <div class="flex justify-between">
+                    <label for="upperCase">Include uppercase letters</label>
+                    <input type="checkbox" name="checkbox" id="upperCase" checked>
+                </div>
+                <div class="flex justify-between">
+                    <label for="numbers">Include numbers</label>
+                    <input type="checkbox" name="checkbox" id="numbers" checked>
+                </div>
+                <div class="flex justify-between">
+                    <label for="symbols">Include symbols</label>
+                    <input type="checkbox" name="checkbox" id="symbols" checked>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
